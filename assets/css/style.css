@@ -18,7 +18,8 @@
     color: rgb(0, 0, 0);
     font-size: 20px;
     font-weight: 700;
-    font-family: montserrat text-align: center;
+    font-family: montserrat; 
+    text-align: center;
 }
 
 .header {
@@ -145,13 +146,13 @@ h1 {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-       box-shadow: 5px 5px 10px teal;
+    box-shadow: 5px 5px 10px teal;
 }
 
 .infoProducto:hover {
     border:10px;
     border-radius: 12px;
-       // box-shadow: 5px 5px 10px rgb(72, 255, 255);
+    // box-shadow: 5px 5px 10px rgb(72, 255, 255);
         border: 5px solid #0fa47216;
         //transform: scale(1.05);
         transform: translate(0px, -5px);
@@ -169,5 +170,11 @@ footer{
     align-items: center;
     background: #359000;
     padding: 10px;
-    
+}
+
+.footerElementos>p{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: ubuntu;
 }
