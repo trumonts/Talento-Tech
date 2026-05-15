@@ -1,180 +1,285 @@
+/* ==========================================
+   1. RESETEO Y ESTILOS GLOBALES
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    /* Evita scrolls horizontales accidentales */
+}
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================
+   2. ESTILOS BASE (MÓVIL PRIMERO)
+   ========================================== */
+
+/* Preheader */
 .preHeader {
     background-color: aquamarine;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     padding: 10px;
-
-   }
+}
 
 .bannerHeader>p {
-    color: rgb(0, 0, 0);
-    font-size: 20px;
+    color: #000;
+    font-size: 14px;
     font-weight: 700;
-    font-family: montserrat; 
-    text-align: center;
 }
 
+/* Header & Menú */
 .header {
-    width: 100vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: auto;
-    border-top: 1px rgb(8, 7, 0) solid;
-    border-bottom: 1px rgb(8, 7, 0) solid;
-    margin-top: 10px;
-    margin-bottom: 10px
+    padding: 15px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    gap: 15px;
 }
 
-.logo {
-    width: 40%;
-    height: auto
+.imgLogo {
+    max-width: 180px;
 }
 
 .menu {
-    width: 50%;
-    height: auto
-}
-
-.menu>nav>a {
-    padding: 0 10px 0 10px;
-    color: black;
-}
-
-
-.imgLogo {
-    width: 300px;
-    height: auto;
-}
-
-nav>a {
-    color: rgb(0, 0, 0);
-}
-
-
-
-h1 {
-    color: rgb(2, 243, 142);
-    text-align: center;
-
-    font-size: 50px;
-    font-weight: 500;
-    font-family: montserrat;
-}
-
-.textoDescripcion {
-    text-align: center;
-    font-size: 2cqi;
-    color: cadetblue;
-}
-
-.contenedorPrincipal {
-    width: 100vw;
-    height: auto;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    gap: 15px;
+}
+
+.menu>a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hero Principal */
+.contenedorPrincipal {
+    width: 100%;
     background: linear-gradient(white, #0fa473);
-    padding-bottom: 5px;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.bannerHero>img {
-    width: 80vw;
-    background: #0fa473;
+h1.tituloPrincipal {
+    color: #0fa473;
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
+.textoDescripcion {
+    color: #2c5d63;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.bannerHero img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* Sección Productos */
 .productos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     background-color: beige;
-    padding: 20px ;
-   
-
-  
+    padding: 30px 10px;
 }
 
 .contenedorProductos {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 50px;
-    border-radius: 10px;
-    background-color: rgb(179, 223, 223);
-    width: 80vw;
-    overflow: auto;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px  teal ;
-}
-
-.producto {
-    width: 30%;
-    height: auto;
-    
-}
-
-.infoProducto {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    background-color: aliceblue;
-    border:5px solid #0fa47216;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(179, 223, 223);
     border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
     box-shadow: 5px 5px 10px teal;
 }
 
+.producto {
+    width: 100%;
+}
+
+.infoProducto {
+    background-color: aliceblue;
+    border: 3px solid #0fa47216;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 3px 3px 8px rgba(0, 128, 128, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .infoProducto:hover {
-    border:10px;
-    border-radius: 12px;
-    // box-shadow: 5px 5px 10px rgb(72, 255, 255);
-        border: 5px solid #0fa47216;
-        //transform: scale(1.05);
-        transform: translate(0px, -5px);
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 15px rgba(0, 128, 128, 0.4);
 }
 
-
-.infoProducto>img {
-    width: 50%;
+.imgProducto {
+    width: 120px;
+    margin: 0 auto 15px;
 }
 
-
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #359000;
-    padding: 10px;
+.nombreProducto {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.footerElementos>p{
-    color: white;
-    font-size: 20px;
+.descripcionProducto {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.preciProducto {
+    font-size: 18px;
     font-weight: 700;
-    font-family: ubuntu;
+    margin-bottom: 15px;
+}
+
+.addCart {
+    display: inline-block;
+    background-color: #0fa473;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Formulario */
+.contact {
+    padding: 40px 20px;
+    background-color: rgb(179, 223, 223);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.textAreaForm {
+    width: 100%;
+}
+
+form button {
+    background-color: #0fa473;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #359000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerElementos>p {
+    color: white;
+    font-size: 14px;
+}
+
+/* -----
+   3. MEDIA QUERIES (TABLETS - Desde 768px)
+   ----- */
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 50px;
+    }
+
+    h1.tituloPrincipal {
+        font-size: 40px;
+    }
+
+    .contenedorProductos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .producto {
+        width: 45%;
+        /* Dos productos por fila en tablets */
+    }
+}
+
+/* ==========================================
+   4. MEDIA QUERIES (ESCRITORIOS - Desde 1024px)
+   ========================================== */
+@media (min-width: 1024px) {
+    .bannerHeader>p {
+        font-size: 18px;
+    }
+
+    .imgLogo {
+        max-width: 250px;
+    }
+
+    .menu>a {
+        font-size: 16px;
+    }
+
+    h1.tituloPrincipal {
+        font-size: 50px;
+    }
+
+    .contenedorProductos {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .producto {
+        width: 30%;
+        /* Tres productos por fila en pantallas grandes */
+    }
 }
