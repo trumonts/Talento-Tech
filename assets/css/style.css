@@ -70,15 +70,14 @@ body {
     height: auto;
 }
 
-/*    Reseñas con grid */
+/*Sección Reseñas*/
 .tituloResenas {
     color: #0fa473;
 }
-
+/*    Reseñas con grid */
 .contenedorGridResenas {
     display: grid;
     grid-template-columns: 1fr;
-    /* 1 columna en móvil */
     gap: 25px;
 }
 
@@ -117,13 +116,13 @@ body {
 @media (min-width: 768px) {
     .contenedorGridResenas {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 columnas en tablets */
+      
     }
 }
 
 @media (min-width: 992px) {
     .contenedorGridResenas {
         grid-template-columns: repeat(3, 1fr);
-        /* 3 columnas en pantallas grandes */
+        
     }
 }
