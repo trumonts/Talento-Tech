@@ -1,5 +1,5 @@
 /* ==========================================
-   1. RESETEO Y ESTILOS GLOBALES
+   Estilos Globales
    ========================================== */
 * {
     margin: 0;
@@ -174,6 +174,84 @@ h1.tituloPrincipal {
     margin-bottom: 10px;
 }
 
+/*Reseñas GRID*/
+
+.resenas {
+    background-color: aliceblue;
+    padding: 50px 20px;
+    text-align: center;
+
+}
+
+.tituloResenas {
+    font-size: 24px;
+    color: #0fa473;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Configuración de Grid en Móvil (1 sola columna por defecto) */
+.contenedorGridResenas {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Una columna que ocupa todo el ancho */
+    gap: 20px;
+    /* Espacio de separación entre tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjetaResena {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #0fa47216;
+    box-shadow: 5px 5px 10px rgba(0, 128, 128, 0.15);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.tarjetaResena:hover {
+    transform: translateY(-5px);
+    border-color: #0fa473;
+}
+
+.infoUsuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.imgUsuario {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* Hace la foto del usuario completamente redonda */
+    object-fit: cover;
+}
+
+.nombreUsuario {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.puntuacion {
+    color: #ffb703;
+    /* Color dorado para las estrellas */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.textoResena {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    font-style: italic;
+}
+
 form {
     width: 100%;
     max-width: 500px;
@@ -228,7 +306,7 @@ footer {
 }
 
 /* -----
-   3. MEDIA QUERIES (TABLETS - Desde 768px)
+   . MEDIA QUERIES (TABLETS - Desde 768px)
    ----- */
 @media (min-width: 768px) {
     .header {
@@ -251,6 +329,11 @@ footer {
         width: 45%;
         /* Dos productos por fila en tablets */
     }
+}
+
+.contenedorGridResenas {
+    grid-template-columns: repeat(2, 1fr);
+    /* Se transforma en 2 columnas en Tablets */
 }
 
 /* ==========================================
@@ -280,6 +363,16 @@ footer {
 
     .producto {
         width: 30%;
-        /* Tres productos por fila en pantallas grandes */
+        
     }
+
+        .contenedorGridResenas {
+            grid-template-columns: repeat(3, 1fr);
+            
+        }
+    
+        .tituloResenas {
+            font-size: 32px;
+            
+        }
 }
