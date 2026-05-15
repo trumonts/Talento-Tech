@@ -1,118 +1,51 @@
-/* ==========================================
-   Estilos Globales
-   ========================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/*Importo fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
-    /* Evita scrolls horizontales accidentales */
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* ==========================================
-   2. ESTILOS BASE (MÓVIL PRIMERO)
-   ========================================== */
-
-/* Preheader */
-.preHeader {
+.bg-aquamarine {
     background-color: aquamarine;
-    text-align: center;
-    padding: 10px;
 }
 
-.bannerHeader>p {
-    color: #000;
-    font-size: 14px;
-    font-weight: 700;
+.bg-beige {
+    background-color: beige;
 }
 
-/* Header & Menú */
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    gap: 15px;
+/* Personalizo botones de acuerdo a la marca Serenah */
+.btn-custom {
+    background-color: #0fa473;
+    color: white;
+    transition: background-color 0.2s ease;
 }
 
-.imgLogo {
-    max-width: 180px;
+.btn-custom:hover {
+    background-color: #0c855d;
+    color: white;
 }
 
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.menu>a {
-    color: black;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-/* Hero Principal */
+/*    HERO Y PRODUCTOS */
 .contenedorPrincipal {
-    width: 100%;
     background: linear-gradient(white, #0fa473);
-    padding: 40px 20px;
-    text-align: center;
 }
 
-.hero {
-    max-width: 800px;
-    margin: 0 auto;
+.hero-max-width {
+    max-width: 700px;
 }
 
-h1.tituloPrincipal {
+.tituloPrincipal {
     color: #0fa473;
-    font-size: 28px;
-    margin-bottom: 15px;
 }
 
 .textoDescripcion {
-    color: #2c5d63;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.bannerHero img {
-    border-radius: 8px;
-    width: 100%;
-}
-
-/* Sección Productos */
-.productos {
-    background-color: beige;
-    padding: 30px 10px;
+    color: cadetblue;
 }
 
 .contenedorProductos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
     background-color: rgb(179, 223, 223);
     border-radius: 10px;
     box-shadow: 5px 5px 10px teal;
-}
-
-.producto {
-    width: 100%;
 }
 
 .infoProducto {
@@ -120,95 +53,40 @@ h1.tituloPrincipal {
     border: 3px solid #0fa47216;
     border-radius: 10px;
     padding: 20px;
-    text-align: center;
-    box-shadow: 3px 3px 8px rgba(0, 128, 128, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Alinea los botones al fondo equitativamente */
+    box-shadow: 5px 5px 10px rgba(0, 128, 128, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .infoProducto:hover {
     transform: translateY(-5px);
-    box-shadow: 5px 5px 15px rgba(0, 128, 128, 0.4);
 }
 
 .imgProducto {
-    width: 120px;
-    margin: 0 auto 15px;
+    width: 220px;
+    height: auto;
 }
 
-.nombreProducto {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.descripcionProducto {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.preciProducto {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.addCart {
-    display: inline-block;
-    background-color: #0fa473;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* Formulario */
-.contact {
-    padding: 40px 20px;
-    background-color: rgb(179, 223, 223);
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-/*Reseñas GRID*/
-
-.resenas {
-    background-color: aliceblue;
-    padding: 50px 20px;
-    text-align: center;
-
-}
-
+/*    Reseñas con grid */
 .tituloResenas {
-    font-size: 24px;
     color: #0fa473;
-    margin-bottom: 30px;
-    font-weight: 700;
-    text-align: center;
 }
 
-/* Configuración de Grid en Móvil (1 sola columna por defecto) */
 .contenedorGridResenas {
     display: grid;
     grid-template-columns: 1fr;
-    /* Una columna que ocupa todo el ancho */
-    gap: 20px;
-    /* Espacio de separación entre tarjetas */
-    max-width: 1200px;
-    margin: 0 auto;
+    /* 1 columna en móvil */
+    gap: 25px;
 }
 
 .tarjetaResena {
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
     border: 3px solid #0fa47216;
-    box-shadow: 5px 5px 10px rgba(0, 128, 128, 0.15);
-    text-align: left;
     transition: transform 0.3s ease;
 }
 
@@ -220,159 +98,32 @@ h1.tituloPrincipal {
 .infoUsuario {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
+    gap: 12px;
 }
 
 .imgUsuario {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    /* Hace la foto del usuario completamente redonda */
     object-fit: cover;
 }
 
-.nombreUsuario {
-    font-size: 16px;
-    font-weight: 700;
-    color: #333;
+/*    FORMULARIO  */
+.container-form-width {
+    max-width: 550px;
 }
 
-.puntuacion {
-    color: #ffb703;
-    /* Color dorado para las estrellas */
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.textoResena {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.5;
-    font-style: italic;
-}
-
-form {
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form label {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    font-size: 16px;
-    width: 100%;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-.textAreaForm {
-    width: 100%;
-}
-
-form button {
-    background-color: #0fa473;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* Footer */
-footer {
-    background: #359000;
-    padding: 20px;
-    text-align: center;
-}
-
-.footerElementos>p {
-    color: white;
-    font-size: 14px;
-}
-
-/* -----
-   . MEDIA QUERIES (TABLETS - Desde 768px)
-   ----- */
+/* Media Queries para mutar el CSS Grid de las Reseñas */
 @media (min-width: 768px) {
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20px 50px;
-    }
-
-    h1.tituloPrincipal {
-        font-size: 40px;
-    }
-
-    .contenedorProductos {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .producto {
-        width: 45%;
-        /* Dos productos por fila en tablets */
+    .contenedorGridResenas {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en tablets */
     }
 }
 
-.contenedorGridResenas {
-    grid-template-columns: repeat(2, 1fr);
-    /* Se transforma en 2 columnas en Tablets */
-}
-
-/* ==========================================
-   4. MEDIA QUERIES (ESCRITORIOS - Desde 1024px)
-   ========================================== */
-@media (min-width: 1024px) {
-    .bannerHeader>p {
-        font-size: 18px;
+@media (min-width: 992px) {
+    .contenedorGridResenas {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas en pantallas grandes */
     }
-
-    .imgLogo {
-        max-width: 250px;
-    }
-
-    .menu>a {
-        font-size: 16px;
-    }
-
-    h1.tituloPrincipal {
-        font-size: 50px;
-    }
-
-    .contenedorProductos {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .producto {
-        width: 30%;
-        
-    }
-
-        .contenedorGridResenas {
-            grid-template-columns: repeat(3, 1fr);
-            
-        }
-    
-        .tituloResenas {
-            font-size: 32px;
-            
-        }
 }
