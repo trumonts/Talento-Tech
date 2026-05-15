@@ -113,7 +113,7 @@ body {
     max-width: 550px;
 }
 
-/* Media Queries para mutar el CSS Grid de las Reseñas */
+/* Media Queries  */
 @media (min-width: 768px) {
     .contenedorGridResenas {
         grid-template-columns: repeat(2, 1fr);
