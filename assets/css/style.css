@@ -1,51 +1,122 @@
-/*Importo fuentes*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+/*    Estilos Globales    */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    /* Evita scrolls horizontales accidentales */
 }
 
-.bg-aquamarine {
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*   ESTILOS BASE Mobile first */
+
+/* Preheader */
+.preHeader {
     background-color: aquamarine;
+    text-align: center;
+    padding: 10px;
 }
 
-.bg-beige {
-    background-color: beige;
+.bannerHeader>p {
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-/* Personalizo botones de acuerdo a la marca Serenah */
-.btn-custom {
-    background-color: #0fa473;
-    color: white;
-    transition: background-color 0.2s ease;
+/* Header & Menú */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    gap: 15px;
 }
 
-.btn-custom:hover {
-    background-color: #0c855d;
-    color: white;
+.imgLogo {
+    max-width: 180px;
 }
 
-/*    HERO Y PRODUCTOS */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu>a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hero Principal */
 .contenedorPrincipal {
+    width: 100%;
     background: linear-gradient(white, #0fa473);
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.hero-max-width {
-    max-width: 700px;
+.hero {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.tituloPrincipal {
+h1.tituloPrincipal {
     color: #0fa473;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+h2.tituloProductos {
+    color: #0fa473;
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
 }
 
 .textoDescripcion {
-    color: cadetblue;
+    color: #2c5d63;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.bannerHero img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* Sección Productos */
+.productos {
+    background-color: beige;
+    padding: 30px 10px;
 }
 
 .contenedorProductos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
     background-color: rgb(179, 223, 223);
     border-radius: 10px;
     box-shadow: 5px 5px 10px teal;
+}
+
+.producto {
+    width: 100%;
 }
 
 .infoProducto {
@@ -53,39 +124,93 @@ body {
     border: 3px solid #0fa47216;
     border-radius: 10px;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Alinea los botones al fondo equitativamente */
-    box-shadow: 5px 5px 10px rgba(0, 128, 128, 0.1);
-    transition: transform 0.3s ease;
+    text-align: center;
+    box-shadow: 3px 3px 8px rgba(0, 128, 128, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .infoProducto:hover {
     transform: translateY(-5px);
+    box-shadow: 5px 5px 15px rgba(0, 128, 128, 0.4);
 }
 
 .imgProducto {
-    width: 220px;
-    height: auto;
+    width: 120px;
+    margin: 0 auto 15px;
 }
 
-/*Sección Reseñas*/
-.tituloResenas {
-    color: #0fa473;
+.nombreProducto {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
-/*    Reseñas con grid */
+
+.descripcionProducto {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.preciProducto {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.addCart {
+    display: inline-block;
+    background-color: #0fa473;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Formulario */
+.contact {
+    padding: 40px 20px;
+    background-color: rgb(179, 223, 223);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/*Reseñas GRID*/
+
+.resenas {
+    background-color: aliceblue;
+    padding: 50px 20px;
+    text-align: center;
+
+}
+
+.tituloResenas {
+    font-size: 24px;
+    color: #0fa473;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Grid Mobile */
 .contenedorGridResenas {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 25px;
+        gap: 20px;
+        max-width: 1200px;
+    margin: 0 auto;
 }
 
 .tarjetaResena {
     background-color: white;
-    padding: 25px;
-    border-radius: 12px;
+    padding: 20px;
+    border-radius: 10px;
     border: 3px solid #0fa47216;
+    box-shadow: 5px 5px 10px rgba(0, 128, 128, 0.15);
+    text-align: left;
     transition: transform 0.3s ease;
 }
 
@@ -97,32 +222,160 @@ body {
 .infoUsuario {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
+    margin-bottom: 10px;
 }
 
 .imgUsuario {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-/*    FORMULARIO  */
-.container-form-width {
-    max-width: 550px;
+.nombreUsuario {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
 }
 
-/* Media Queries  */
+.puntuacion {
+    color: #ffb703;
+        font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.textoResena {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.textAreaForm {
+    width: 100%;
+}
+
+form button {
+    background-color: #0fa473;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #359000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerElementos>p {
+    color: white;
+    font-size: 14px;
+}
+
+
+/*Medias Queries*/
+
+/* -----
+    Media Queries (TABLETS - Desde 768px)
+   ----- */
 @media (min-width: 768px) {
-    .contenedorGridResenas {
-        grid-template-columns: repeat(2, 1fr);
-      
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 50px;
+    }
+
+    h1.tituloPrincipal {
+        font-size: 40px;
+    }
+
+    .contenedorProductos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .producto {
+        width: 45%;
+        /* Dos productos por fila en tablets */
     }
 }
 
-@media (min-width: 992px) {
+.contenedorGridResenas {
+    grid-template-columns: repeat(1, 1fr);
+    
+}
+
+/* ----
+    Media Queries (Desktop - Desde 1024px)
+   ---- */
+@media (min-width: 1024px) {
+    .bannerHeader>p {
+        font-size: 18px;
+    }
+
+    .imgLogo {
+        max-width: 250px;
+    }
+
+    .menu>a {
+        font-size: 16px;
+    }
+
+    h1.tituloPrincipal {
+        font-size: 50px;
+    }
+
+    .contenedorProductos {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .producto {
+        width: 30%;
+
+    }
+
     .contenedorGridResenas {
         grid-template-columns: repeat(3, 1fr);
-        
+
+    }
+
+    .tituloResenas {
+        font-size: 32px;
+
     }
 }
