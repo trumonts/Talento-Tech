@@ -24,17 +24,26 @@
 
         <section class="header">
             <div class="logo">
-                <a href="./index.html"> <img class="imgLogo" src="./assets/img/logo.png" alt="">LOGO</a>
+                <a href="./index.html">
+                    <img class="imgLogo" src="./assets/img/logo.png" alt="Serenah Logo">
+                </a>
             </div>
-            <div class="menu">
-                <nav>
-                    <a href="./index.html">Inicio</a>
-                    <a href="./productos.html">Productos</a>
-                    <a href="./contacto.html">Contacto</a>
-                    <a href="./nosotros.html">Nosotros</a>
-                    <a href="./cart.html" class="nav-cart-btn"><i class="bi bi-cart3"></i> Carrito <span id="contador-carrito" class="badge-cart">0</span></a>
-                </nav>
+            
+            <div class="header-right">
+                <a href="./cart.html" class="nav-cart-btn">
+                    <i class="bi bi-cart3"></i> <span class="cart-text">Carrito</span> <span id="contador-carrito" class="badge-cart">0</span>
+                </a>
+                <button class="hamburger-btn" id="hamburger-toggle" aria-label="Abrir menú">
+                    <i class="bi bi-list"></i>
+                </button>
             </div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="./index.html">Inicio</a>
+                <a href="./productos.html">Productos</a>
+                <a href="./contacto.html">Contacto</a>
+                <a href="./nosotros.html">Nosotros</a>
+            </nav>
         </section>
     </header>
 
@@ -48,18 +57,19 @@
 
         <section class="contacto-seccion d-flex flex-column align-items-center py-5">
             <div class="card p-4 shadow-lg border-0 contacto-card">
-                <form id="formulario-contacto">
+                <form id="formulario-contacto" action="https://formspree.io/f/mojrgjeo"
+  method="POST">
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre Completo</label>
-                        <input type="text" class="form-control" id="nombre" required placeholder="Tu nombre">
+                        <input type="text" name="name"class="form-control" id="nombre" required placeholder="Tu nombre">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" required placeholder="tu@correo.com">
+                        <input type="email" name="email" class="form-control" id="email" required placeholder="tu@correo.com">
                     </div>
                     <div class="mb-3">
                         <label for="mensaje" class="form-label">Mensaje</label>
-                        <textarea class="form-control" id="mensaje" rows="4" required placeholder="Escribe tu consulta aquí..."></textarea>
+                        <textarea name="message" class="form-control" id="mensaje" rows="4" required placeholder="Escribe tu consulta aquí..."></textarea>
                     </div>
                     <button type="submit" class="btn w-100 btn-submit-contacto">Enviar Mensaje</button>
                 </form>
