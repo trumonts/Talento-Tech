@@ -1,0 +1,28 @@
+import { guardarCarrito, obtenerCarrito, vaciarCarritoStorage } from "./storage.js";
+import { actualizarContador, mostrarMensaje } from "./ui.js";
+
+export const agregarAlCarrito = (producto) => {
+  const carrito = obtenerCarrito();
+  
+  //Verifico si ya existe para no duplicar filas visuales, o simplemente lo agregamos
+  carrito.push(producto);
+
+  guardarCarrito(carrito);
+  actualizarContador(carrito);
+  mostrarMensaje("¡Producto de skincare agregado! 🎉");
+};
+
+export const eliminarProducto = (indice) => {
+  const carrito = obtenerCarrito();
+  carrito.splice(indice, 1);
+
+  guardarCarrito(carrito);
+  actualizarContador(carrito);
+  mostrarMensaje("Producto eliminado del carrito ✅");
+};
+
+export const vaciarCarrito = () => {
+  vaciarCarritoStorage();
+  actualizarContador([]);
+  mostrarMensaje("Tu carrito ha sido vaciado");
+};
